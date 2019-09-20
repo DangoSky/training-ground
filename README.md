@@ -17,7 +17,7 @@
 > 该实验无法通过 clone 运行起来，因为涉及到 Google sheet api 使用所需要的密钥。若要进行实验的话，可以在 `src/i18n` 目录下新建一个 `const.js`, 导出 Google sheet 的 ID 和 使用 API 的密钥（密钥需要在[控制台](https://console.developers.google.com/apis/dashboard)设置获取, 详情可见[文档](https://developers.google.com/sheets/api/guides/authorizing)）。
 
 ```js
-src/i18n/const.js
+// src/i18n/const.js
 
 exports.SHEETID = 'Google sheet ID';
 exports.KEY = '密钥';
