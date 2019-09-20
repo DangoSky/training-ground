@@ -14,7 +14,7 @@
 
 - 先通过 `path` 获取当前所使用的语言，导出一个 `intl` 函数，通过 `curLocale` 和 key 来返回解析好的对象中相应的数据。
 
-> 该实验无法通过 clone 运行起来，因为涉及到 Google sheet api 使用所需要的密钥。若要进行实验的话，可以在 `src/i18n` 目录下新建一个 `const.js`, 导出 Google sheet 的 ID 和 使用 API 的密钥（密钥需要在[控制台](https://console.developers.google.com/apis/dashboard)设置获取）。
+> 该实验无法通过 clone 运行起来，因为涉及到 Google sheet api 使用所需要的密钥。若要进行实验的话，可以在 `src/i18n` 目录下新建一个 `const.js`, 导出 Google sheet 的 ID 和 使用 API 的密钥（密钥需要在[控制台](https://console.developers.google.com/apis/dashboard)设置获取, 详情可见[文档](https://developers.google.com/sheets/api/guides/authorizing)）。
 
 ```js
 src/i18n/const.js
