@@ -1,68 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 练兵场
 
-## Available Scripts
+## flow
 
-In the project directory, you can run:
+> 国际化实验
 
-### `npm start`
+### 实现思路：
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 使用 [Google sheet api](https://developers.google.com/sheets/api/) 获取 Google sheet 的数据，并写入到本地文件中。 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- 通过 `npm run i18n` 运行脚本，完成数据拉取和写入的工作。之后若 Google sheet 有更新的话，只需要再g `npm run i18n` 即可。
 
-### `npm test`
+- 将 sheet 数据解析成一个以 key 为键，值为一个对象（语言为键，文案为值）的对象。
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 先通过 `path` 获取当前所使用的语言，导出一个 `intl` 函数，通过 `curLocale` 和 key 来返回解析好的对象中相应的数据。
 
-### `npm run build`
+> 该实验无法通过 clone 运行起来，因为涉及到 Google sheet api 使用所需要的密钥。若要进行实验的话，可以在 `src/i18n` 目录下新建一个 `const.js`, 导出 Google sheet 的 ID 和 使用 API 的密钥（密钥需要在[控制台](https://console.developers.google.com/apis/dashboard)设置获取）。
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+src/i18n/const.js
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+exports.SHEETID = 'Google sheet ID';
+exports.KEY = '密钥';
+```
