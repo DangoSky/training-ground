@@ -21,12 +21,15 @@ const keyArr = [];
       })
     }
   })
-  console.log(keyArr);
-  console.log(data);
 })();
 
 function getLocale() {
-  return 'zh-cn'
+  const pathArr = window.location.pathname.split('/');
+  if (pathArr.includes('en')) {
+    return 'en-us'
+  } else {
+    return 'zh-cn';
+  }
 };
 
 const curLocale = getLocale();

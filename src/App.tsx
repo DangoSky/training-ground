@@ -6,7 +6,7 @@ class App extends PureComponent {
   render() {
     return (
       <Router>
-        <Route path='/flow' exact component={flow} />
+        <Route path='/flow/:name(zh|en)' exact component={flow} />
       </Router>
     );
   }
