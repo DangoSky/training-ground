@@ -14,6 +14,7 @@ class Flow extends React.Component {
         <p>{intl('slogan')}</p>
         <p>{intl('contact_us')}</p>
         <p>{intl('search_tip')}</p>
+        {this.props.children} 
       </div>
     )
   }
