@@ -5,7 +5,8 @@ import flow1 from './pages/flow1';
 import flow2 from './pages/flow2';
 import flow3 from './pages/flow3';
 
-import home from './pages/oracle/student/home';
+import StudentHome from './pages/oracle/student/home';
+import adminHome from './pages/oracle/admin/home';
 
 class App extends PureComponent {
   render() {
@@ -16,8 +17,8 @@ class App extends PureComponent {
         <Route path='/flow2' exact component={flow2}></Route>
         <Route path='/flow3' exact component={flow3}></Route>
 
-        <Route path='/oracle/student' exact component={home}></Route>
-
+        <Route path='/oracle/student' exact component={StudentHome}></Route>
+        <Route path='/oracle/admin' exact component={adminHome}></Route>
       </Router>
     );
   }
