@@ -29,29 +29,34 @@ const dataSource = [
     id: '1706300099',
     name: '夏侯瑾轩	',
     sex: '男',
-    age: '22',
-    birthday: '1998.01.01',
-    phone: '15212778859',
-    password: '0099'
-  }, {
-    key: '1',
-    id: '1706300100',
-    name: '龙溟',
-    sex: '男',
-    age: '28',
-    birthday: '1996.07.16',
-    phone: '15824551779',
-    password: '0100'
-  },  {
-    key: '2',
-    id: '1706300101',
-    name: '姜承',
-    sex: '男',
-    age: '26',
-    birthday: '1998.02.07',
-    phone: '15416958376',
-    password: '0101'
-  }, 
+    age: '21',
+    birthday: '1998.09.14',
+    phone: '15626441778',
+    grade: 4,
+    password: '000000'
+  },
+  // {
+  //   key: '1',
+  //   id: '1706300100',
+  //   name: '龙溟',
+  //   sex: '男',
+  //   age: '28',
+  //   birthday: '1996.07.16',
+  //   phone: '15824551779',
+  //   password: '0100',
+  //   grade: 4
+  // },
+  // {
+  //   key: '2',
+  //   id: '1706300101',
+  //   name: '姜承',
+  //   sex: '男',
+  //   age: '26',
+  //   birthday: '1998.02.07',
+  //   phone: '15416958376',
+  //   password: '0101',
+  //   grade: 2
+  // }, 
   // {
   //   key: '',
   //   id: '',
@@ -106,6 +111,10 @@ class ManageStudent extends React.Component<Props, State> {
       title: '手机号',
       dataIndex: 'phone',
       key: 'phone',
+    },  {
+      title: '选修课程总学分',
+      dataIndex: 'grade',
+      key: 'grade',
     }, {
       title: '密码',
       dataIndex: 'password',

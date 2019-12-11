@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import flow from './pages/flow';
 import flow1 from './pages/flow1';
 import flow2 from './pages/flow2';

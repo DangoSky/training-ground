@@ -38,6 +38,7 @@ function getServedPath(appPackageJson) {
   return ensureSlash(servedUrl, true);
 }
 
+
 const moduleFileExtensions = [
   'web.mjs',
   'mjs',
