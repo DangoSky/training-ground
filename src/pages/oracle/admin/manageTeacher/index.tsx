@@ -27,36 +27,35 @@ const dataSource = [
   {
     key: '0',
     id: '0000000001',
-    name: '王国维',
-    wage: '30000',
+    name: '荀彧',
+    wage: '20000',
     job: '辅导员',
     password: '0001'
   },
-  // {
-  //   key: '0',
-  //   id: '0000000002',
-  //   name: '张载',
-  //   wage: '16000',
-  //   job: '讲师',
-  //   password: '0002'
-  // }, {
-  //   key: '0',
-  //   id: '0000000003',
-  //   name: '曾国藩',
-  //   wage: '18000',
-  //   job: '讲师',
-  //   password: '0003'
-  // },  
-  // {
-  //   key: '',
-  //   id: '',
-  //   name: '',
-  //   sex: '',
-  //   age: '',
-  //   birthday: '',
-  //   phone: '',
-  //   password: ''
-  // }, 
+  {
+    key: '1',
+    id: '0000000002',
+    name: '诸葛亮',
+    wage: '12000',
+    job: '实验室管理',
+    password: '0002'
+  },
+  {
+    key: '2',
+    id: '0000000003',
+    name: '庞统',
+    wage: '10000',
+    job: '讲师',
+    password: '0003'
+  },
+  {
+    key: '2',
+    id: '0000000004',
+    name: '周瑜',
+    wage: '10000',
+    job: '讲师',
+    password: '0004'
+  },
 ];
 
 // @autobind
@@ -153,9 +152,9 @@ class ManageTeacher extends React.Component<Props, State> {
           </Form>
         </Modal>
 
-        <div className="create-student" onClick={() => this.setState({visible: true, modalAction: '新增教师'})}>
+        {/* <div className="create-student" onClick={() => this.setState({visible: true, modalAction: '新增教师'})}>
           <Icon type="plus" style={{ fontSize: '30px', color: '#08c' }} />
-        </div>
+        </div> */}
       </div>
     )
   }

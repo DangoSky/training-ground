@@ -8,7 +8,7 @@ import { FormComponentProps } from 'antd/es/form';
 
 interface State {
   curMenu: string,
-  visible: boolean
+  visible: boolean,
 }
 
 interface Props extends FormComponentProps {}
@@ -34,7 +34,7 @@ class Home extends React.Component<Props, State> {
     super(props);
     this.state = {
       curMenu: 'showInfo',
-      visible: false
+      visible: false,
     }
   }
 
@@ -44,21 +44,14 @@ class Home extends React.Component<Props, State> {
     })
   }
 
-  renderMenu() {
-    return (
-      <Menu>
-        <Menu.Item>
-          <div onClick={() => {this.changeCurMenu('chooseClass')}}>选课</div>
-        </Menu.Item>
-        <Menu.Item>
-          <div onClick={() => {this.setState({visible: true})}}>修改信息</div>
-        </Menu.Item>
-        <Menu.Item>
-          <div onClick={() => {this.changeCurMenu('showInfo')}}>查询信息</div>
-        </Menu.Item>
-      </Menu>
-    );
-  }
+  handleClick = (e: any) => {
+    if (['editInfo'].includes(e.key)) {
+      return;
+    }
+    this.setState({
+      curMenu: e.key,
+    });
+  };
 
   renderCom() {
     const { curMenu } = this.state;
@@ -86,17 +79,21 @@ class Home extends React.Component<Props, State> {
 
     return (
       <div>
+        <h2 className="user-name">你好，刘备~</h2>
         <header className="student-header">
           <h2>{menuItem[curMenu]}</h2>
-          <Avatar size="small" icon="user" />
-          <span>夏侯瑾轩</span>
-          <Dropdown overlay={this.renderMenu()}>
-            <a className="ant-dropdown-link" href="#">
-              <Icon type="down" />
-            </a>
-          </Dropdown>
         </header>
-
+        <Menu onClick={this.handleClick} selectedKeys={[this.state.curMenu]} mode="horizontal">
+          <Menu.Item key="chooseClass">
+            <div onClick={() => {this.changeCurMenu('chooseClass')}}>选课</div>
+          </Menu.Item>
+          <Menu.Item key="editInfo">
+            <div onClick={() => this.setState({visible: true})}>修改信息</div>
+          </Menu.Item>
+          <Menu.Item key="showInfo">
+            <div onClick={() => {this.changeCurMenu('showInfo')}}>查询信息</div>
+          </Menu.Item>
+        </Menu>
         {this.renderCom()}
 
         <Modal

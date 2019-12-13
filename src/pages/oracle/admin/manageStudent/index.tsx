@@ -26,47 +26,48 @@ const formItemLayout = {
 const dataSource = [
   {
     key: '0',
-    id: '1706300099',
-    name: '夏侯瑾轩	',
+    id: '1706300001',
+    name: '刘备',
     sex: '男',
-    age: '21',
-    birthday: '1998.09.14',
+    age: '33',
+    birthday: '1995-02-23',
     phone: '15626441778',
-    grade: 4,
-    password: '000000'
+    grade: 2,
+    password: '111'
   },
-  // {
-  //   key: '1',
-  //   id: '1706300100',
-  //   name: '龙溟',
-  //   sex: '男',
-  //   age: '28',
-  //   birthday: '1996.07.16',
-  //   phone: '15824551779',
-  //   password: '0100',
-  //   grade: 4
-  // },
-  // {
-  //   key: '2',
-  //   id: '1706300101',
-  //   name: '姜承',
-  //   sex: '男',
-  //   age: '26',
-  //   birthday: '1998.02.07',
-  //   phone: '15416958376',
-  //   password: '0101',
-  //   grade: 2
-  // }, 
-  // {
-  //   key: '',
-  //   id: '',
-  //   name: '',
-  //   sex: '',
-  //   age: '',
-  //   birthday: '',
-  //   phone: '',
-  //   password: ''
-  // }, 
+  {
+    key: '0',
+    id: '1706300002',
+    name: '关羽',
+    sex: '男',
+    age: '32',
+    birthday: '1995-06-08',
+    phone: '13467995218',
+    grade: 2,
+    password: '002'
+  },
+  {
+    key: '0',
+    id: '1706300003',
+    name: '张飞',
+    sex: '男',
+    age: '30',
+    birthday: '1995-10-25',
+    phone: '18092778441',
+    grade: 1,
+    password: '003'
+  },
+  {
+    key: '0',
+    id: '1706300004',
+    name: '赵云',
+    sex: '男',
+    age: '28',
+    birthday: '1993-07-16',
+    phone: '15628441778',
+    grade: 0,
+    password: '004'
+  },
 ];
 
 // @autobind
@@ -182,9 +183,9 @@ class ManageStudent extends React.Component<Props, State> {
           </Form>
         </Modal>
         
-        <div className="create-student" onClick={() => this.setState({visible: true, modalAction: '添加学生'})}>
+        {/* <div className="create-student" onClick={() => this.setState({visible: true, modalAction: '添加学生'})}>
           <Icon type="plus" style={{ fontSize: '30px', color: '#08c' }} />
-        </div>
+        </div> */}
       </div>
     )
   }
