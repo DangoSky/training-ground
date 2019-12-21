@@ -10,6 +10,8 @@ import flow3 from './pages/flow3';
 import StudentHome from './pages/oracle/student/home';
 import adminHome from './pages/oracle/admin/home';
 
+import cellAutomaton from './pages/cellAutomaton';
+
 class App extends PureComponent {
   render() {
     return (
@@ -21,6 +23,8 @@ class App extends PureComponent {
 
         <Route path='/oracle/student' exact component={StudentHome}></Route>
         <Route path='/oracle/admin' exact component={adminHome}></Route>
+
+        <Route path='/cellAutomaton' exact component={cellAutomaton}></Route>
       </Router>
     );
   }

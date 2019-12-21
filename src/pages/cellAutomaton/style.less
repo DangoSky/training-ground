@@ -1,0 +1,22 @@
+.photos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(2, 50vh);
+
+  .photo-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+
+    .photo-row {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+
+      .photo-cell {
+        flex: 1;
+      }
+    }
+  }
+}
